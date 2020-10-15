@@ -1,0 +1,16 @@
+.slideshow-card {
+    margin: auto;
+    max-width: 400px;
+  }
+
+  .aniimg {
+      max-width: 200px;
+  }
+  .imageholder{
+    margin: auto;
+    text-align: center;
+  }
+
+  .mat-card-actions {
+      text-align: center;
+  }

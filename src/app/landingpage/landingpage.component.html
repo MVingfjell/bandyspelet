@@ -1,0 +1,24 @@
+<div class="well" *ngIf="authService.getUser()">
+  Logged in as:  <b>{{authService.getUser()}}</b>
+  <br/>
+<a href (click)="loginComp.logout()">Log out</a>
+</div> 
+
+<mat-tab-group mat-align-tabs="center" (selectedTabChange)="tabChanged($event)">
+  <mat-tab [label]=first>
+ <app-slideshow [selectedTab]="selectedTabIndex"></app-slideshow>
+
+
+  </mat-tab>
+
+
+
+
+  <mat-tab [label]=second>
+    <app-slideshow [selectedTab]="selectedTabIndex"></app-slideshow>
+
+  </mat-tab>
+  <mat-tab [label]=third>
+    <app-slideshow [selectedTab]="selectedTabIndex"></app-slideshow>
+  </mat-tab>
+</mat-tab-group>

@@ -1,0 +1,13 @@
+.login-card {
+    max-width: 400px;
+    margin: auto;
+    padding: 2%;
+    margin-top: 20%;
+  }
+
+  .login {
+text-align: center;
+  }
+.mat-card-actions{
+    text-align: right;
+}

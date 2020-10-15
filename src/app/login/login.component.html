@@ -1,0 +1,33 @@
+<div class="container loggedin" *ngIf="authService.getUser()">
+    <p>Logged in as <b>{{ authService.getUser()}}</b></p>
+    <a href (click)="logout()">Log out</a>
+</div>
+<mat-card class="login-card" *ngIf="!authService.getUser()">
+  
+    <mat-card-header>
+      <mat-card-title>Login</mat-card-title>
+      <mat-card-subtitle>With your credentials</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="alert alert-danger" role="alert" *ngIf="message">
+            {{message}}
+        </div>
+        <div class="login container" >
+        <mat-form-field appearance="fill">
+            <mat-label>User name</mat-label>
+            <input matInput placeholder="user name" name="username" #username>
+          </mat-form-field>
+          <br>
+          <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="password" type="password" name="password" #password>
+          </mat-form-field>
+          <br>
+        </div>
+      
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" [routerLink]="['/home']" (click)="login(username.value, password.value)">Login</button>
+      <button mat-raised-button color="Warn">Cancel</button>
+    </mat-card-actions>
+  </mat-card>
