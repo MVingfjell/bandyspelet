@@ -5,7 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { LoggedInGuard } from './logged-in.guard';
 
 const routes: Routes = [
-//{path:'', redirectTo: 'login', pathMatch: 'full'},
+{path:'', redirectTo: 'login', pathMatch: 'full'},
 {path:'login', component: LoginComponent},
 
 //authentication

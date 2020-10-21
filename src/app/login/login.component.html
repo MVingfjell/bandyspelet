@@ -1,6 +1,6 @@
 <div class="container loggedin" *ngIf="authService.getUser()">
     <p>Logged in as <b>{{ authService.getUser()}}</b></p>
-    <a href (click)="logout()">Log out</a>
+    <a href [routerLink]="['/login']" (click)="logout()">Log out</a>
 </div>
 <mat-card class="login-card" *ngIf="!authService.getUser()">
   
