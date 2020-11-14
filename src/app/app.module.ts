@@ -15,14 +15,27 @@ import {LoggedInGuard} from './logged-in.guard';
 import {MatTabsModule} from '@angular/material/tabs';
 import { SlideshowComponent } from './slideshow/slideshow.component';
 import {MatSliderModule} from '@angular/material/slider';
+import { CommentComponent } from './comment/comment.component';
+import {MatSelectModule} from '@angular/material/select';
+import { CommentfeedComponent } from './commentfeed/commentfeed.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatListModule} from '@angular/material/list';
+import {MatIcon} from '@angular/material/icon';
+import {MatIconModule} from '@angular/material/icon';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+
+
+//import { Message } from './message.model';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    SlideshowComponent
+    SlideshowComponent,
+    CommentComponent,
+    CommentfeedComponent
     
   ],
   imports: [
@@ -34,7 +47,13 @@ import {MatSliderModule} from '@angular/material/slider';
     MatButtonModule,
     MatInputModule,
     MatTabsModule,
-    MatSliderModule
+    MatSliderModule,
+    MatSelectModule,
+    MatGridListModule,
+    MatListModule,
+    MatIconModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [LoggedInGuard, AUTH_PROVIDERS],
   bootstrap: [AppComponent]

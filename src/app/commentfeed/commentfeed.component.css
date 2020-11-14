@@ -1,0 +1,11 @@
+.commentfeeditem{
+    margin: auto;
+    padding: 5%;
+    margin: 5%;
+    margin-top: 0%;
+}
+.commentfeedcard{
+    width: 100%;
+    min-width: 400px;    
+}
+

@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class AuthService {
 login (username: string, password: string): boolean {
-  if (username === 'user' && password === 'hejabyn')
+  if (username === 'superuser' && password === 'hejabyn')
   {
     localStorage.setItem('username', username);
     return true;

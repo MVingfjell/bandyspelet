@@ -1,0 +1,23 @@
+    <mat-card class="commentfeedcard">
+        <mat-card-content>
+   <h2>Comments:</h2>
+</mat-card-content>
+</mat-card>
+              <mat-list *ngFor="let message of messages | async">
+            
+                <mat-card class="commentfeedcard">
+                      <mat-card-content>
+                        <mat-list-item class="commentfeeditem">  
+                <mat-icon matListIcon>  chat_bubble_outline</mat-icon>
+                <div mat-line>{{message.user}}</div>
+                <div mat-line> {{message.comment}} </div>   
+            </mat-list-item>
+          </mat-card-content>
+        </mat-card>
+
+              
+            </mat-list>
+            
+             
+        
+   
