@@ -1,17 +1,17 @@
-<mat-grid-list cols="2" rowHeight="2:2">
-    <mat-grid-tile>
+<div class="content" fxLayout="row" fxLayout.xs="column"  
+fxLayoutAlign="flex-start"   fxLayoutGap="32px">
+    <div fxFlex="50" class="sec1" fxFlex.xs="55">
         <div class="listcontainer">
             <form [formGroup]="commentForm"
             (ngSubmit)="onComment(commentForm.value)">
-            <mat-card class="commentcard" style="width: 100%;">
+            <mat-card class="commentcard" style="width: 80%; padding: 5%; margin: 5%;">
             <mat-card-header>
                 <mat-card-title>make a comment</mat-card-title>
                 <mat-card-subtitle>What do you think</mat-card-subtitle>
               </mat-card-header>
               <mat-card-content>
                 <div class="comment-container">
-                   
-                    <mat-form-field appearance="fill"  style="width:95%">
+                    <mat-form-field appearance="fill"  style="width:100%">
                       <mat-label>Give a commment</mat-label>
                       <textarea matInput placeholder="give a comment" 
                       [formControl]="commentForm.controls['comment']"
@@ -32,23 +32,21 @@
               </mat-card-content>
               <mat-card-actions style="text-align: end; width:95%">
                 <button mat-raised-button color="Warn">Rensa</button>
-                <button mat-raised-button color="primary" [disabled]="!commentForm.valid" type="submit" >Kommentera</button>
+                <button mat-raised-button color="primary" [disabled]="comment.hasError('required')" type="submit" >Kommentera</button>
               </mat-card-actions>
             </mat-card>
         </form>
-
-          
-            
-            
-
         </div>
-    </mat-grid-tile>
-    <mat-grid-tile>
+    </div>
+
+
+    <div fxFlex="50" class="sec2">
         <div class="listcontainer">
         <app-commentfeed>
             
         </app-commentfeed>
     </div>
-    </mat-grid-tile>
+</div>
 
-  </mat-grid-list>
+
+  </div>

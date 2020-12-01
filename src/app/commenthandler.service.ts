@@ -12,8 +12,7 @@ interface IMessagesOperation extends Function {
   providedIn: 'root'
 })
 export class CommenthandlerService {
-  //public message: Message;
-//commentstream: Message[] = []
+ 
 newMessages: Subject<Message> = new Subject<Message>();
 messages: Observable<Message[]>;
 //

@@ -23,6 +23,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatIcon} from '@angular/material/icon';
 import {MatIconModule} from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -53,7 +54,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatListModule,
     MatIconModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FlexLayoutModule
   ],
   providers: [LoggedInGuard, AUTH_PROVIDERS],
   bootstrap: [AppComponent]

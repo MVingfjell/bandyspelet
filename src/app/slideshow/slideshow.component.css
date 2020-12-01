@@ -3,6 +3,10 @@
     max-width: 400px;
   }
 
+  .slideshow {
+      margin: 5%;
+  }
+
   .aniimg {
       max-width: 200px;
   }

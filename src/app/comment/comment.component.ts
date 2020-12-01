@@ -15,13 +15,18 @@ import {FormBuilder, FormGroup, Validators, AbstractControl, FormControl} from '
 
 export class CommentComponent implements OnInit {
   commentForm: FormGroup;
-  comment: AbstractControl
-  submitted: boolean
-initiatedComment: Message
-user: string;
-messages: Observable<any>
-//messageService: CommenthandlerService = new CommenthandlerService()
-  constructor(public commentHandler: CommenthandlerService, public authservice: AuthService, private fb: FormBuilder) { 
+  comment: AbstractControl;
+  submitted: boolean;
+
+  initiatedComment: Message
+  user: string;
+  messages: Observable<any>
+
+  constructor(
+    public commentHandler: CommenthandlerService, 
+    public authservice: AuthService, 
+    private fb: FormBuilder,
+    ) { 
 this.prepareForm();
   }
 prepareForm(){
@@ -38,6 +43,7 @@ prepareForm(){
 }
 
   ngOnInit(): void {
+   
   this.messages = this.commentHandler.messages
 this.initiatedComment = new Message()
 
@@ -49,6 +55,8 @@ this.initiatedComment = new Message()
     }
   }
 
+  
+
   onComment(comment: object){
     this.submitted = true;
     if(this.commentForm.valid){
@@ -59,6 +67,7 @@ this.initiatedComment = new Message()
     const sendMessage: Message = this.initiatedComment
     sendMessage.user = this.user;
     sendMessage.comment = commentValue;
+    sendMessage.date = new Date();
    //console.log(sendMessage)
     this.commentHandler.addMessage(sendMessage);
     this.resetForm();

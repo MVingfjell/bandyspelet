@@ -1,16 +1,17 @@
-    <mat-card class="commentfeedcard">
+    <mat-card class="commentfeedcard" style="width: 80%; padding: 5%; margin: 5%; margin-bottom: 1%;">
         <mat-card-content>
    <h2>Comments:</h2>
 </mat-card-content>
 </mat-card>
               <mat-list *ngFor="let message of messages | async">
             
-                <mat-card class="commentfeedcard">
+                <mat-card class="commentfeedcard" style="width: 80%; padding: 5%; margin: 5%; margin-top:1%; margin-bottom:0%;">
                       <mat-card-content>
                         <mat-list-item class="commentfeeditem">  
                 <mat-icon matListIcon>  chat_bubble_outline</mat-icon>
-                <div mat-line>{{message.user}}</div>
-                <div mat-line> {{message.comment}} </div>   
+                <div mat-line><p>{{message.user}}</p></div>
+                <div mat-line>{{message.date| date: 'EEEE hh:mm a'}}</div>
+                <div mat-line><p> {{message.comment}}</p> </div>   
             </mat-list-item>
           </mat-card-content>
         </mat-card>
